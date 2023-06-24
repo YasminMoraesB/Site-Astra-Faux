@@ -1,0 +1,42 @@
+body{
+    background-color: #f6f7f9;
+    color: #343434;
+    font-family: Merienda Bold;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+li{
+    display: inline-block;
+    margin:20px;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+h2{
+    color: #343434;
+    font-family: Arial;
+}
+a{
+    color:#343434;
+}
+a:hover{
+    color: rgb(132, 14, 201);
+    transition: 0,3s all;
+}
+
+
+/* Aqui fica responsivo*/
+
+@media screen and (max-width: 760px){
+    header{
+        flex-direction: column;
+    }
+    h1{
+        font-size: 38px;
+        text-align: center;
+    }
+}
