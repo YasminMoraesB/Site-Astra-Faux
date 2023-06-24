@@ -1,0 +1,108 @@
+body{
+    background-color: #f6f7f9;
+    color: #343434;
+    font-family: Merienda Bold;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+title{
+    flex-direction: column;
+    line-height: 10px;
+}
+li{
+     display: inline-block;
+     margin:20px;
+}
+a{
+    color:#343434;
+}
+a:hover{
+    color: rgb(132, 14, 201);
+    transition: 0,3s all;
+}
+h1{
+    font-weight: 190px;
+}
+main{
+    display: flex;
+    flex-direction:row;
+    margin-top: 25px;
+}
+p{
+    line-height: 20px;
+    max-width: 500px;
+    font-family: Arial;
+}
+img{
+    width: 450px;
+    float: right;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+form [type="submit"]{
+    height: 50px;
+    width: 50%;
+    background-color: rgb(132, 14, 201);
+    color: white;
+    font-weight: bold;
+}
+form [type="submit"]{
+    cursor:pointer
+}
+span{
+    font-family: arial;
+    font-size: 12px;
+    padding: 10px; 
+}
+input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+
+/*aqui fica responsivo*/
+
+@media screen and (max-width: 760px){
+    header{
+        flex-direction: column;
+    }
+    main{
+        flex-direction: column;
+    }
+    h2{
+        font-size: 38px;
+        text-align: center;
+    }
+    form{
+        margin: 0 auto;
+        width: 100%;
+    }
+    input{
+        align-self: center;
+    }
+    img{
+        width: 360px;
+    }
+    ul{
+        text-align: center;
+    }
+    span{
+        text-align: center;
+    }
+}
+
