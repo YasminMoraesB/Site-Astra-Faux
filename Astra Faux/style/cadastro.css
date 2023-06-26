@@ -16,7 +16,7 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-h2{
+h4{
     color: #343434;
     font-family: Arial;
 }
@@ -26,6 +26,9 @@ a{
 a:hover{
     color: rgb(132, 14, 201);
     transition: 0,3s all;
+}
+form{
+    font-family: arial;
 }
 
 
