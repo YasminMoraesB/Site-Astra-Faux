@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Merienda Bold';
+    src: url(Components/fonts/Merienda-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(132, 14, 201);
+    background-repeat: no-repeat;
+    background: url("/style/Components/images/fundo_inicio.png");
+    background-size: cover;
+    background-position: center-center;
+    
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Merienda Bold;
+    color: #f8f8f8;
+}
+
+a {
+    color: #f8f8f8;
+    text-decoration: none;
+    transition: 0.3s; 
+}
+
+a:hover{
+    opacity: 0.5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+
+.menu-nav{
+    list-style: nome;
+    display: flex;
+}
+
+.menu-nav  a {
+    letter-spacing: 3px;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.logo{
+    margin-left: 30px;
+    margin-top: 20px;
+    font-family: Merienda Bold;
+    color: #f8f8f8;
+}
+
+section {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+
+
+.imagem_fundo{
+    width: 60%;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.inf{
+    display: inline-block;
+    font-family: Merienda Bold;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 85px;
+    color: #f8f8f8;
+    
+}
+
+h6{
+    font-family: Merienda Regular;
+    color:#ffd900;
+    
+}
+
+.subtitulo{
+    font-family: Merienda light;
+    font-size: 20px;
+}
+
+.login{
+    height: 60px;
+    width: 60%;
+    background-color: #e6ac38;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    font-size: 20px;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    margin-top: 250px;
+    width: 100%;
+    height: 70px; 
+    background-color: #f5f5f5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+.botao_final{
+    background-color: #e6ac38;
+    display: inline-block;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.botao_img_shopee{
+    max-width: 70%;
+    height: auto;
+}
+
+.botao_img_insta{
+    max-width: 80%;
+    height: auto;
+}
+
+.redes{
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 10px;
+    font-family: Merienda Bold;
+    margin-top: 20px;
+}
+
+
+
+
