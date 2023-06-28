@@ -37,9 +37,12 @@ main{
     margin-top: 25px;
 }
 p{
+    margin-bottom: 0cqmin;
     line-height: 20px;
-    max-width: 500px;
+    max-width: 450px;
     font-family: Arial;
+    font-weight: bold;
+    color:#343434;
 }
 img{
     width: 450px;

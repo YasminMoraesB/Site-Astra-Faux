@@ -1,0 +1,38 @@
+body{
+    background-color: #f6f7f9;
+    color: #343434;
+    font-family: Merienda Bold;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+title{
+    flex-direction: column;
+    line-height: 10px;
+}
+li{
+     display: inline-block;
+     margin:20px;
+}
+a{
+    color:#343434;
+}
+a:hover{
+    color: rgb(132, 14, 201);
+    transition: 0,3s all;
+}
+h1{
+    font-weight: 190px;
+}
+main{
+    display: flex;
+    flex-direction:row;
+    margin-top: 25px;
+}
