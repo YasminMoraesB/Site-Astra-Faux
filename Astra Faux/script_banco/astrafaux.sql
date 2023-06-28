@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `adm` (
   `username` varchar(5) NOT NULL,
-  `senha` varchar(20) DEFAULT NULL,
+  `senha` varchar(65) DEFAULT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `qtd` int(5) DEFAULT NULL,
   `descricao` text DEFAULT NULL,
   `valor` decimal(6,2) DEFAULT NULL,
-  `img` blob DEFAULT NULL,
+  `caminho_da_img` varchar (50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
