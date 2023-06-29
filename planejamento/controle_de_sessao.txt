@@ -1,0 +1,38 @@
+-----  Tutorial para controle de sessão -----
+
+10s - Vai no Head do HTML
+<script>
+    setTimeout(function() {
+      window.location.href = "index.html";
+    }, 10000); // Redireciona para index.html após 2min automaticamente (Esta com 10s pra teste apenas, lembrar de trocar)
+ </script>
+
+2min - Vai no Head do HTML
+<script>
+    setTimeout(function() {
+      window.location.href = "index.html";
+    }, 120000); // Redireciona para index.html após 2min automaticamente (Esta com 10s pra teste apenas, lembrar de trocar)
+</script>
+
+Puxar os dados da Sessão
+
+Ele vai em todos no Header, Antes da NavBar
+<?php 
+            if(!isset($_SESSION)){
+                    session_start();
+		 echo '<a href="logoff.php" class="btn btn-outline-secondary" role="button" >Voltar a tela de Login</a>';		
+                }
+                
+                if (!isset($_SESSION['nome'])){
+                    die ();
+                } else {
+                    echo "<p> Usuário Logado: ";
+                    echo $_SESSION['nome'];
+            }     
+        ?>
+
+Logoff
+if(!isset($_SESSION)){
+                    session_start();
+		        echo '<a href="logoff.php" class="btn btn-outline-secondary" role="button" >Voltar a tela de Login</a>';		
+                }
