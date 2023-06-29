@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel = "stylesheet" href = "style.css">
-    <title>Cadastro de Clientes</title> 
+    <title>Cadastro de Clientes</title>
 </head>
 <body>
     <header>
@@ -51,7 +51,7 @@
                     ('$nome','$senha', '$dataFormatada', '$email', '$end', '$comple', '$cidade', '$estado', '$cep') ";
 
         
-        //Se o cadastro for feito com sucesso 
+        //Se o cadastro for feito com sucesso
         if($mysqli->query($sqli)){
             echo "<h1>Dados inseridos</h1>";
             echo "<p>Nome: $nome</p>";
@@ -63,6 +63,8 @@
         echo "<h1>Dados inseridos</h1>";
         echo "<p>Nome: $nome</p>";
         echo "<p>Data: $dataFormatada</p>";
+
+        
 
 
 
