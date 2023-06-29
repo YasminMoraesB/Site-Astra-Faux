@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel = "stylesheet" href = "style.css">
-    <title>Cadastro de Clientes</title>
+    <title>Cadastro de Clientes</title> 
 </head>
 <body>
     <header>
@@ -51,31 +51,26 @@
                     ('$nome','$senha', '$dataFormatada', '$email', '$end', '$comple', '$cidade', '$estado', '$cep') ";
 
         
-        //Se o cadastro for feito com sucesso
+        //Se o cadastro for feito com sucesso 
         if($mysqli->query($sqli)){
-            echo "<h1>Dados inseridos</h1>";
-            echo "<p>Nome: $nome</p>";
-            echo "<p>Data: $dataFormatada</p>";
+            echo "<script>alert('Conta criada com sucesso!');";
+            echo "javascript:window.location='index.html';</script>";
+            echo '<br>
+                    <div class="col-12">
+                    <br>
+                        <a href="login_usuario.php" class="btn btn-outline-secondary" role="button" >Voltar a tela de Login</a>
+                    </div>';
+
         } else {
             echo ("Falha na execução");
-        }
 
-        echo "<h1>Dados inseridos</h1>";
-        echo "<p>Nome: $nome</p>";
-        echo "<p>Data: $dataFormatada</p>";
+        }
 
         
 
 
 
     ?>
-
-    <br>
-    <div class="col-12">
-        <br>
-        <a href="login_usuario.php" class="btn btn-outline-secondary" role="button" >Voltar a tela de Login</a>
-    </div>
-    
     
 </body>
 </html>
