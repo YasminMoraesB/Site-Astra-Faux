@@ -41,7 +41,7 @@
         }
 
         if(!$_SESSION){
-            echo "<script>alert('Conta criada com sucesso!');";
+            echo "<script>alert('Logout com sucesso!');";
             echo "javascript:window.location='index.php';</script>";
             echo '<br>';
         }
