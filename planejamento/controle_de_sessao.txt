@@ -15,21 +15,20 @@
 </script>
 
 Puxar os dados da Sessão
-
-Ele vai em todos no Header, Antes da NavBar
+Controle de Sessão paginas normais
 <?php 
-            if(!isset($_SESSION)){
-                    session_start();
-		 echo '<a href="logoff.php" class="btn btn-outline-secondary" role="button" >Voltar a tela de Login</a>';		
-                }
+    if(!isset($_SESSION)){
+        session_start();		
+    }
                 
-                if (!isset($_SESSION['nome'])){
-                    die ();
-                } else {
-                    echo "<p> Usuário Logado: ";
+    if (!isset($_SESSION['nome'])){
+        die ();
+    } else {
+        echo "<p style = 'color:rgb(132, 14, 201)'> Usuário Logado: ";
                     echo $_SESSION['nome'];
-            }     
-        ?>
+                    echo '<p><a href="logoff.php"> Logout</a></p>';
+    }     
+?>
 
 Logoff
 if(!isset($_SESSION)){
