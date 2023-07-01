@@ -33,7 +33,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
         if(isset($_SESSION['atividade']) && (time() - $_SESSION['atividade']) > 10000){
             session_unset();
             session_destroy();
-            echo "<script>window.location.href = 'index.html';</script>"; // Redirecionar para a página inicial
+            echo "<script>window.location.href = 'index.php';</script>"; // Redirecionar para a página inicial
             exit(); // Encerrar o script
         }
 
@@ -55,24 +55,26 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" contet="IE=edge">
-    <link  href="style/style.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
     <link href="style/Fonts.css" rel="stylesheet">
     
     <title>Login</title>  
     
     <script>
-    var timeoutID;
+        var timeoutID;
 
-    function resetTimer() {
-      clearTimeout(timeoutID);
-      timeoutID = setTimeout(function() {
-        window.location.href = "index.html";
-      }, 10000); // Redireciona para index.html 
-    }
-    //Usar as funções que captam o movimento do mouse e se teclas estao sendo pressionadas, pois também é uma atividade do usuario, assim o tempo de atividade reseta
-    document.addEventListener("mousemove", resetTimer);
-    document.addEventListener("keydown", resetTimer);
-  </script>
+        function resetTimer() {
+        clearTimeout(timeoutID);
+
+            timeoutID = setTimeout(function() {
+                window.location.href = "index.php";
+            }, 10000); // Redireciona para index.html 
+        }
+
+        //Usar as funções que captam o movimento do mouse e se teclas estao sendo pressionadas, pois também é uma atividade do usuario, assim o tempo de atividade reseta
+        document.addEventListener("mousemove", resetTimer);
+        document.addEventListener("keydown", resetTimer);
+    </script>
 
 </head>
 <body>
