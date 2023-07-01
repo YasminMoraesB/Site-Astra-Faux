@@ -158,6 +158,14 @@ button:hover{
     margin-top: 20px;
 }
 
+/*aqui entra a responsividade*/
 
-
-
+@media screen and (max-width: 760px){
+.nav{
+    flex-direction: column;
+}
+.inf{
+    font-size: 180%;
+}
+    
+}
