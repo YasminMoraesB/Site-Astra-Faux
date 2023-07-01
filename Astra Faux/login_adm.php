@@ -67,6 +67,10 @@ if(isset($_POST['username']) || isset($_POST['senha'])){
     <div>
         <img src="style/Components/images/logo.png" alt="logo">
     </div>
+
+    <div class="admtitulo">
+    <h2 class="admlogin">Administrador</h2>
+    </div>
         
     <!--Login da loja--> 
     <section class ="caixaLogin">
@@ -76,7 +80,7 @@ if(isset($_POST['username']) || isset($_POST['senha'])){
 
                 <!-- Login-->
                 <div class="login">
-                    <p class="formulario">Email</p> 
+                    <p class="formulario">Username</p> 
                     <label for="username"></label>
                     <input type="text" name="username" id="username" required placeholder = "Digite seu username" autofocus>
                         
