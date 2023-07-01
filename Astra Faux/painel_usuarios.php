@@ -50,7 +50,7 @@ include ('conexao.php');
 
     <!-- Opcoes do que o ADM pode fazer -->
 
-    <img src="./style/Components/images/logo.png" class="rounded mx-auto d-block" alt="Logo astra faux">
+    <img src="./style/Components/images/usuarios_painel.png" class="rounded mx-auto d-block" alt="Logo astra faux">
 
     <div class="text-center">
         <a class="btn btn-primary" href="cadastro_usuario.html" role="button">Cadastrar usuario</a>
