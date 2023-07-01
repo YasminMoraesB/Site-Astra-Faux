@@ -1,0 +1,43 @@
+Create database astrafaux;
+
+CREATE TABLE `adm` (
+  `username` varchar(5) NOT NULL,
+  `senha` varchar(65) DEFAULT NULL,
+PRIMARY KEY (`username`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `adm` (`username`, `senha`) VALUES
+('adm', 'adm');
+
+CREATE TABLE `novidade` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `data_da_publicacao` date DEFAULT NULL,
+  `texto` text DEFAULT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `produto` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `nome` varchar(40) DEFAULT NULL,
+  `qtd` int(5) DEFAULT NULL,
+  `descricao` text DEFAULT NULL,
+  `valor` decimal(6,2) DEFAULT NULL,
+  `caminho_da_img` varchar(50) DEFAULT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `usuario` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `nome` varchar(40) DEFAULT NULL,
+  `senha` varchar(10) DEFAULT NULL,
+  `data_de_nascimento` date DEFAULT NULL,
+  `email` varchar(40) DEFAULT NULL,
+  `endereco` varchar(40) DEFAULT NULL,
+  `complemento` varchar(15) DEFAULT NULL,
+  `cidade` varchar(30) DEFAULT NULL,
+  `estado` varchar(20) DEFAULT NULL,
+  `cep` varchar(10) DEFAULT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
