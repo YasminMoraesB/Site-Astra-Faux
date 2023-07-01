@@ -7,6 +7,19 @@
     <link  href="style/inicio.css" rel="stylesheet">
     <title>Astra Faux</title>    
 </head>
+<script>
+            var timeoutID;
+
+            function resetTimer() {
+                clearTimeout(timeoutID);
+                timeoutID = setTimeout(function() {
+                window.location.href = "index.php";
+                }, 120000); // Redireciona para index.php após 2 minutos (120 segundos) de inatividade
+            }
+
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("keydown", resetTimer);
+        </script>
 <body>
     <header>
         <div id="title">
@@ -19,8 +32,8 @@
                 <ul class="menu-nav">
                     <a href="index.php">Inicio</a>
                     <a href="sobre.php">Sobre</a>
-                    <a href="#">Produtos</a>
-                    <a href="#">Novidades</a>    
+                    <a href="produtos.php">Produtos</a>
+                    <a href="novidades.php">Novidades</a>    
                 </ul>
             </div>
         </nav>
@@ -60,3 +73,13 @@
 
 
 </html>
+
+<?php 
+    if(!isset($_SESSION)){
+        session_start();		
+    }
+                
+    if (!isset($_SESSION['nome'])){
+        die ();
+    }    
+?>
