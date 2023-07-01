@@ -20,7 +20,7 @@
                     <a href="index.php">Inicio</a>
                     <a href="sobre.php">Sobre</a>
                     <a href="#">Produtos</a>
-                    <a href="#">Novidades</a>     
+                    <a href="#">Novidades</a>    
                 </ul>
             </div>
         </nav>
@@ -54,7 +54,8 @@
             <img class="botao_img_shopee" src="./style/Components/images/logo_shopee_preto.png" alt="shopee">
         </button>
         <p class="redes">Loja virtual</p>
-
+        
+        <button class="botao_adm" onclick="window.location.href = 'login_adm.php'">Login ADM</button>
     </footer>
 
 
