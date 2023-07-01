@@ -83,8 +83,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
             <h1 class="navFont">Astra Faux</h1>
         </div>
         <ul class="navFont">
-            <a href="index.html"><li>Inicio</li></a>
-            <a href="sobre.html"><li>Sobre</li></a>
+            <a href="index.php"><li>Inicio</li></a>
+            <a href="sobre.php"><li>Sobre</li></a>
             <a href="#"><li>Produtos</li></a>
             <a href="#"><li>Novidades</li></a>
         </ul>
@@ -117,7 +117,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
                 <!--Inserir link para  a página de criar cadastro-->
                 <p><a class="newConta" href="cadastro_usuario.html"> Crie sua conta </a></p>
 
-                <button class="entrar" onclick="window.location.href = 'index.html'">Entrar</button>
+                <button class="entrar" onclick="window.location.href = 'index.php'">Entrar</button>
             </form>
         </div>
     </section>
