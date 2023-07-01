@@ -19,7 +19,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
         $usuario = $sqli_query->fetch_assoc();
         if(!isset($_SESSION)){
             session_start();
-            echo '<a href="logoff.php" class="btn btn-outline-secondary" role="button" >Voltar a tela de Login</a>';
+            
 
         }
 
@@ -40,6 +40,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
         $_SESSION['atividade'] = time();
         echo "<p> Usuário Logado: ";
         echo $_SESSION['nome'];
+        echo '<p><a href="logoff.php">Logout</a></p>';
 
     }else{
         echo ('<p style="color: #FF4500";>Falha no Login, tente novamente!</p>');
