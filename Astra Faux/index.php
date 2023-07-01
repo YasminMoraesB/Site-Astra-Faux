@@ -55,7 +55,7 @@
         </button>
         <p class="redes">Loja virtual</p>
         
-        <button class="botao_adm" onclick="window.location.href = 'login_adm.php'">Login ADM</button>
+        <a href class="login_adm" src="#">Login adm</a>
     </footer>
 
 
