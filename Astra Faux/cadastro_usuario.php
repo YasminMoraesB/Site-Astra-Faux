@@ -12,20 +12,7 @@
     <title>Cadastro de Clientes</title> 
 </head>
 <body>
-    <header>
-        <div id="title">
-                <h1>Astra Faux</h1>
-            </div>
-            <!--Páginas principais de navegação-->
 
-            <ul>
-                <a href="index.php"><li>Inicio</li></a>
-                <a href="sobre.php"><li>Sobre</li></a>
-                <a href="#"><li>Produtos</li></a>
-                <a href="#"><li>Novidades</li></a>
-            </ul> 
-        </div>      
-    </header>
     <?php
 
         //Pegando as informacoes do forms e colocando em variaveis
@@ -54,12 +41,8 @@
         //Se o cadastro for feito com sucesso 
         if($mysqli->query($sqli)){
             echo "<script>alert('Conta criada com sucesso!');";
-            echo "javascript:window.location='index.html';</script>";
-            echo '<br>
-                    <div class="col-12">
-                    <br>
-                        <a href="login_usuario.php" class="btn btn-outline-secondary" role="button" >Voltar a tela de Login</a>
-                    </div>';
+            echo "javascript:window.location='index.php';</script>";
+
 
         } else {
             echo ("Falha na execução");
