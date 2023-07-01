@@ -47,7 +47,7 @@ nav {
 }
 
 .menu-nav{
-    list-style: nome;
+    list-style: none;
     display: flex;
 }
 
