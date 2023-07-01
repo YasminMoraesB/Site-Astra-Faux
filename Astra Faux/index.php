@@ -55,7 +55,7 @@
         </button>
         <p class="redes">Loja virtual</p>
         
-        <a href class="login_adm" src="login_adm.php">Login adm</a>
+        <a class="login_adm" href="login_adm.php">Login adm</a>
     </footer>
 
 

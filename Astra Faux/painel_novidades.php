@@ -52,11 +52,12 @@ include ('conexao.php');
 
     <img src="./style/Components/images/logo.png" class="rounded mx-auto d-block" alt="Logo astra faux">
 
-    <a class="btn btn-info" href="cadastro_novidade.php" role="button">Cadastrar novidade</a>
-    <a class="btn btn-info" href="consultar_novidade.php" role="button">Consultar novidade</a>
-    <a class="btn btn-info" href="consultar_novidade.php" role="button">Alterar novidade</a>
-    <a class="btn btn-info" href="consultar_novidade.php" role="button">Excluir novidade</a>
-    
+    <div class="text-center">
+        <a class="btn btn-info" href="cadastro_novidade.php" role="button">Cadastrar novidade</a>
+        <a class="btn btn-info" href="consultar_novidade.php" role="button">Consultar novidade</a>
+        <a class="btn btn-info" href="consultar_novidade.php" role="button">Alterar novidade</a>
+        <a class="btn btn-info" href="consultar_novidade.php" role="button">Excluir novidade</a>
+    </div>
 
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

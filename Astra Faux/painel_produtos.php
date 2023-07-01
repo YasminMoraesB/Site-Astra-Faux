@@ -50,13 +50,14 @@ include ('conexao.php');
 
     <!-- Opcoes do que o ADM pode fazer -->
 
-    <img src="./style/Components/images/logo.png" class="rounded mx-auto d-block" alt="Logo astra faux">
+    <img src="./style/Components/images/cilios_molde.png" class="rounded mx-auto d-block" alt="Logo astra faux">
 
-    <a class="btn btn-warning" href="cadastro_produto.php" role="button">Cadastrar produto</a>
-    <a class="btn btn-warning" href="consultar_produto.php" role="button">Consultar produto</a>
-    <a class="btn btn-warning" href="consultar_produto.php" role="button">Alterar produto</a>
-    <a class="btn btn-warning" href="consultar_produto.php" role="button">Excluir produto</a>
-    
+    <div class="text-center">
+        <a class="btn btn-warning" href="cadastro_produto.php" role="button">Cadastrar produto</a>
+        <a class="btn btn-warning" href="consultar_produto.php" role="button">Consultar produto</a>
+        <a class="btn btn-warning" href="consultar_produto.php" role="button">Alterar produto</a>
+        <a class="btn btn-warning" href="consultar_produto.php" role="button">Excluir produto</a>
+    </div>
 
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

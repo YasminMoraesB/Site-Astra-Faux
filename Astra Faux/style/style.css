@@ -52,6 +52,7 @@ p{
 img{
     width: 40%;
     float: right;
+    margin-top: 2%;
 }
 form{
     display: flex;
@@ -131,6 +132,11 @@ input{
     color: #f8b122;
     display: flex;
     margin-right: 60%;
+}
+.admlogin{
+    color: #343434;
+    font-family: merienda Bold;
+    font-size:140%;
 }
 
 
