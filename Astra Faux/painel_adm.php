@@ -51,10 +51,12 @@ include ('conexao.php');
     <!-- Opcoes do que o ADM pode fazer -->
 
     <img src="./style/Components/images/logo.png" class="rounded mx-auto d-block" alt="Logo astra faux">
-
-    <a class="btn btn-primary" href="painel_usuarios.php" role="button">Usuarios</a>
-    <a class="btn btn-warning" href="painel_produtos.php" role="button">Produtos</a>
-    <a class="btn btn-info" href="painel_novidades.php" role="button">Novidades</a>
+    
+    <div class="text-center">
+        <a class="btn btn-primary" href="painel_usuarios.php" role="button">Usuarios</a>
+        <a class="btn btn-warning" href="painel_produtos.php" role="button">Produtos</a>
+        <a class="btn btn-info" href="painel_novidades.php" role="button">Novidades</a>
+    </div>
     
 
     
