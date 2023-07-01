@@ -40,25 +40,48 @@ include ('conexao.php');
     </header>
 
     <form action="">    
-        <input name="busca" placeholder="Digite um nome para pesquisar" type="text">
-        <button type="submit">Pesquisar</button>
+        <input style="width:300px; margin-left: 15px; " name="busca" placeholder="Digite um nome para pesquisar" type="text">
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+        <a class="btn btn-outline-dark" href="painel_produtos.php" role="button">Voltar ao painel</a>
     </form>
+
+
 
     <?php
 
         include("conexao.php");
 
+        
+            //Criando o nome de cada Coluna, usando Bootstrap junto
+            echo "<table class = 'table table-striped table-bordered '>";
+            echo "<thead class='thead-dark'>";
+            
+            echo "<tr>";
+            echo "<th>ID</th>";
+            echo "<th>Nome</th>";
+            echo "<th>Senha</th>";
+            echo "<th>Data de Nascimento</th>";
+            echo "<th>Email</th>";
+            echo "<th>Endereço</th>";
+            echo "<th>Complemento</th>";
+            echo "<th>Cidade</th>";
+            echo "<th>Estado</th>";
+            echo "<th>CEP</th>";
+            echo "<th>Ações</th>";
+            echo "</tr>";
+
+            echo "</thead>"; 
 
         if(!isset($_GET ['busca'])){
             $sqli = "SELECT * FROM usuario";
-            $resultado = $mysqli->query($sqli) or die ("Erro ao consultar dados". $mysqli -> error);
+            $resultado = $mysqli->query($sqli) or die ("Erro ao consultar dados");
         } else {
 
                    // Por questão de segurança e para evitar a injeção no banco de dados é feito esse comando real_escape_string
 
             $busca = $mysqli ->real_escape_string ($_GET['busca']);
             $sqlBusca = "SELECT * FROM usuario WHERE nome LIKE '%$busca%'";
-            $resultado = $mysqli->query($sqlBusca) or die ("Erro ao consultar dados". $mysqli -> error);
+            $resultado = $mysqli->query($sqlBusca) or die ("Erro ao consultar dados");
 
             if ($resultado ->num_rows ==0 ){
                 echo "<td>Nenhum resultado encontrado</td>";
@@ -97,26 +120,7 @@ include ('conexao.php');
         
 
 
-
-            //Criando o nome de cada Coluna, usando Bootstrap junto
-            echo "<table class = 'table table-striped table-bordered '>";
-            echo "<thead class='thead-dark'>";
-            
-            echo "<tr>";
-            echo "<th>ID</th>";
-            echo "<th>Nome</th>";
-            echo "<th>Senha</th>";
-            echo "<th>Data de Nascimento</th>";
-            echo "<th>Email</th>";
-            echo "<th>Endereço</th>";
-            echo "<th>Complemento</th>";
-            echo "<th>Cidade</th>";
-            echo "<th>Estado</th>";
-            echo "<th>CEP</th>";
-            echo "<th>Ações</th>";
-            echo "</tr>";
-
-            echo "</thead>";  
+ 
 
 
 
