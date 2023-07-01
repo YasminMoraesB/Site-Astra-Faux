@@ -11,7 +11,7 @@
     
     <script>
     setTimeout(function() {
-      window.location.href = "index.html";
+      window.location.href = "index.php";
     }, 120000); // Redireciona para index.html após 2min automaticamente
   </script>
 </head>
@@ -23,8 +23,8 @@
             <h1 class="navFont">Astra Faux</h1>
         </div>
         <ul class="navFont">
-            <a href="index.html"><li>Inicio</li></a>
-            <a href="sobre.html"><li>Sobre</li></a>
+            <a href="index.php"><li>Inicio</li></a>
+            <a href="sobre.php"><li>Sobre</li></a>
             <a href="#"><li>Produtos</li></a>
             <a href="#"><li>Novidades</li></a>
         </ul>

@@ -17,8 +17,8 @@
         <nav>
             <div>
                 <ul class="menu-nav">
-                    <a href="index.html">Inicio</a>
-                    <a href="sobre.html">Sobre</a>
+                    <a href="index.php">Inicio</a>
+                    <a href="sobre.php">Sobre</a>
                     <a href="#">Produtos</a>
                     <a href="#">Novidades</a>     
                 </ul>
