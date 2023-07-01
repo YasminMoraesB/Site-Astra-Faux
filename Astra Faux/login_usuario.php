@@ -61,10 +61,19 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
     <title>Login</title>  
     
     <script>
-    setTimeout(function() {
-      window.location.href = "index.html";
-    }, 10000); // Redireciona para index.html após 2min automaticamente
+    var timeoutID;
+
+    function resetTimer() {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(function() {
+        window.location.href = "index.html";
+      }, 10000); // Redireciona para index.html 
+    }
+    //Usar as funções que captam o movimento do mouse e se teclas estao sendo pressionadas, pois também é uma atividade do usuario, assim o tempo de atividade reseta
+    document.addEventListener("mousemove", resetTimer);
+    document.addEventListener("keydown", resetTimer);
   </script>
+
 </head>
 <body>
     <header>
