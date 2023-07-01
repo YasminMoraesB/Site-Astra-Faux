@@ -50,7 +50,7 @@ include ('conexao.php');
 
     <!-- Opcoes do que o ADM pode fazer -->
 
-    <img src="./style/Components/images/logo.png" class="rounded mx-auto d-block" alt="Logo astra faux">
+    <img src="./style/Components/images/novidade_molde.png" class="rounded mx-auto d-block" alt="Logo astra faux">
 
     <div class="text-center">
         <a class="btn btn-info" href="cadastro_novidade.php" role="button">Cadastrar novidade</a>
