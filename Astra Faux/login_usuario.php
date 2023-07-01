@@ -68,7 +68,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
 
             timeoutID = setTimeout(function() {
                 window.location.href = "index.php";
-            }, 10000); // Redireciona para index.html 
+            }, 120000); // Redireciona para index.html 
         }
 
         //Usar as funções que captam o movimento do mouse e se teclas estao sendo pressionadas, pois também é uma atividade do usuario, assim o tempo de atividade reseta
@@ -85,8 +85,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
         <ul class="navFont">
             <a href="index.php"><li>Inicio</li></a>
             <a href="sobre.php"><li>Sobre</li></a>
-            <a href="#"><li>Produtos</li></a>
-            <a href="#"><li>Novidades</li></a>
+            <a href="produtos.php"><li>Produtos</li></a>
+            <a href="novidades.php"><li>Novidades</li></a>
         </ul>
     </header>
     
