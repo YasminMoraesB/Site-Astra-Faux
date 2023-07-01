@@ -11,14 +11,14 @@ INSERT INTO `adm` (`username`, `senha`) VALUES
 ('adm', 'adm');
 
 CREATE TABLE `novidade` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL auto_increment,
   `data_da_publicacao` date DEFAULT NULL,
   `texto` text DEFAULT NULL,
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `produto` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL auto_increment,
   `nome` varchar(40) DEFAULT NULL,
   `qtd` int(5) DEFAULT NULL,
   `descricao` text DEFAULT NULL,
@@ -28,7 +28,7 @@ PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `usuario` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL auto_increment,
   `nome` varchar(40) DEFAULT NULL,
   `senha` varchar(10) DEFAULT NULL,
   `data_de_nascimento` date DEFAULT NULL,
