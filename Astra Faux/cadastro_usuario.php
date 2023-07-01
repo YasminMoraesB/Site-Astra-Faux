@@ -19,8 +19,8 @@
             <!--Páginas principais de navegação-->
 
             <ul>
-                <a href="index.html"><li>Inicio</li></a>
-                <a href="sobre.html"><li>Sobre</li></a>
+                <a href="index.php"><li>Inicio</li></a>
+                <a href="sobre.php"><li>Sobre</li></a>
                 <a href="#"><li>Produtos</li></a>
                 <a href="#"><li>Novidades</li></a>
             </ul> 
