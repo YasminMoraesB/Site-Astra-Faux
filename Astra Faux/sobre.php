@@ -71,7 +71,7 @@
             <p><b>R:</b> Meu público-alvo são <b class="negrito">pessoas que amam cosméticos e que encontram sua auto estima nesse mundo chamado maquiagem .</b></p>
             <h4>Porque o nome Astra Faux?</h4>
             <p><b>R:</b> Pensei em um <b class="negrito">nome único</b> que combine com suas cores de uma personagem que tanto gosto.</p> 
-            <button class="produto" onclick="window.location.href = 'produto.php'">Conheça nossos produtos</button>
+            <button class="produto" onclick="window.location.href = 'produtos.php'">Conheça nossos produtos</button>
         </div>
       </div>
 </body>
