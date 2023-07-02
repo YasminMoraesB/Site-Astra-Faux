@@ -42,10 +42,10 @@ include ('conexao.php');
         <!--Páginas principais de navegação-->
 
         <ul>
-            <a href="index.php"><li>Inicio</li></a>
-            <a href="sobre.php"><li>Sobre</li></a>
-            <a href="#"><li>Produtos</li></a>
-            <a href="#"><li>Novidades</li></a>
+            <a href="painel_adm.php"><li>Painel</li></a>
+            <a href="painel_usuarios.php"><li>Usuario</li></a>
+            <a href="painel_produtos.php"><li>Produtos</li></a>
+            <a href="painel_novidades.php"><li>Novidades</li></a>
         </ul>
     </header>
 
