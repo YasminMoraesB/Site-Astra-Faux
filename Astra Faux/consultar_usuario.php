@@ -101,13 +101,12 @@ include ('conexao.php');
                 echo "<td>".$dados['estado']. "</td>";
                 echo "<td>".$dados['cep']. "</td>";
                 
-                ?>
 
-                <td> 
-                    <a class='btn btn-primary' href='alterar_usuario.php?id=$row[id]'>Editar</a>
-                    <a class='btn btn-danger' href='excluir_usuario.php?id=$row[id]'>Excluir</a>
-                </tr>
-                <?php
+                echo "<td>
+                    <a class='btn btn-primary' href='alterar_usuario.php?id=$dados[id]'>Editar</a>
+                    <a class='btn btn-danger' href='excluir_usuario.php?id=$dados[id]'>Excluir</a>
+                </tr>";
+
 
 
                 }
