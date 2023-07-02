@@ -156,7 +156,7 @@
                 </div>
                 <div class="col-12">
                   <br>
-                  <button type="submit" class="btn btn-warning"> Enviar </button>
+                  <button type="submit" class="btn btn-warning" id="update" name="update"> Enviar </button>
                   <a href="consultar_usuario.php" class="btn btn-outline-secondary" role="button" >Voltar</a>
                 </div>
               </form>
