@@ -20,7 +20,7 @@
         }
 
         if(!$_SESSION){
-            echo "<script>alert('Logout com sucesso!');";
+            echo "<script>alert('Logout feito com sucesso!');";
             echo "javascript:window.location='index.php';</script>";
             echo '<br>';
         }
