@@ -37,12 +37,13 @@ include ('conexao.php');
         <h1 class='ml-3'> Consultar Usuários</h1>
         <p class='ml-3'> I- Para uma busca por nome <b style = "color:rgb(132, 14, 201)">digite o nome da pessoa</b> na barra de busca e <b style = "color:rgb(132, 14, 201)">clique em pesquisar</b></p>
         <p class='ml-3'> II- Para mostrar todos os registros <b style = "color:rgb(132, 14, 201)">deixe a barra de busca vazia e clique em pesquisar</b></p>
+        <p class='ml-3'> <b style = "color:rgb(132, 14, 201)">OBS.: </b> Por questão de segurança, as senhas dos usuários estão criptografadas e inacessiveis para alteração, apenas o próprio usuário poderá troca-lá</p>
     </header>
 
     <form action="">    
         <input style="width:300px; margin-left: 15px; " name="busca" placeholder="Digite um nome para pesquisar" type="text">
         <button type="submit" class="btn btn-primary">Pesquisar</button>
-        <a class="btn btn-outline-dark" href="painel_produtos.php" role="button">Voltar ao painel</a>
+        <a class="btn btn-outline-dark" href="painel_usuarios.php" role="button">Voltar ao painel</a>
     </form>
 
 
@@ -93,7 +94,8 @@ include ('conexao.php');
                 echo "<td>".$dados['id']. "</td>";
                 echo "<td>".$dados['nome']. "</td>";
                 echo "<td>".$dados['senha']. "</td>";
-                echo "<td>".$dados['data_de_nascimento']. "</td>";
+                //Transformando a Data do Banco cujo formato é YYYY/MM/DD para o formato que conhecemos DD/MM/YYYY
+                echo "<td>".$dataFormatada = date("d/m/Y", strtotime($dados['data_de_nascimento'])). "</td>";
                 echo "<td>".$dados['email']. "</td>";
                 echo "<td>".$dados['endereco']. "</td>";
                 echo "<td>".$dados['complemento']. "</td>";
@@ -106,7 +108,6 @@ include ('conexao.php');
                     <a class='btn btn-primary' href='alterar_usuario.php?id=$dados[id]'>Editar</a>
                     <a class='btn btn-danger' href='excluir_usuario.php?id=$dados[id]'>Excluir</a>
                 </tr>";
-
 
 
                 }
