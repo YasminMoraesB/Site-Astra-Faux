@@ -57,6 +57,14 @@ include ('conexao.php');
         <a class="btn btn-warning" href="painel_produtos.php" role="button">Produtos</a>
         <a class="btn btn-info" href="painel_novidades.php" role="button">Novidades</a>
     </div>
+
+    <br>
+    <div class="text-center">
+        <a class="btn btn-outline-dark" href="logoff.php" role="button">Fazer Logout</a>
+        <br> <br>
+        <small>Essa opção de logout te fará voltar a ser um usuário normal</small>
+        
+    </div>
     
 
     
