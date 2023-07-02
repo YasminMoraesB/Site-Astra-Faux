@@ -15,8 +15,8 @@
             function resetTimer() {
                 clearTimeout(timeoutID);
                 timeoutID = setTimeout(function() {
-                window.location.href = "index.php";
-                }, 120000); // Redireciona para index.php após 2 minutos (120 segundos) de inatividade
+                window.location.href = "logoff_inatividade.php";
+                }, 120000); // Redireciona para logoff_inatividade para dar o motivo do logoff e depois pro index.html, após 2 minutos (120 segundos) de inatividade
             }
 
             document.addEventListener("mousemove", resetTimer);
@@ -46,7 +46,7 @@
     if (!isset($_SESSION['nome'])){
         die ();
     } else {
-        echo "<p style = 'color:white'> Usuário Logado: ";
+        echo "<p style = 'color:black'> Usuário Logado: ";
                     echo $_SESSION['nome'];
                     echo '<p><a href="logoff.php"> Logout</a></p>';
     }     
