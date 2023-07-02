@@ -2,6 +2,8 @@
 
 include ('conexao.php');
 
+//A senha do administrador não foi criptografada, pois o cadastro do unico administrador do Banco foi feita direta no Banco de Dados, futuramente posso criar uma pagina
+//de Cadastro de Usuario Administrador, junto com um CRUD completo dele, por agora vai servir
 
 if(isset($_POST['username']) || isset($_POST['senha'])){
 
@@ -9,7 +11,7 @@ if(isset($_POST['username']) || isset($_POST['senha'])){
     $senha = $mysqli->real_escape_string($_POST['senha']);
 
     $sqli = "SELECT * FROM adm WHERE username = '$username' AND senha = '$senha'";
-    $sqli_query = $mysqli->query($sqli) or die ("Falha na execução da Query procure o suporte para resolução" . $mysqli->error);
+    $sqli_query = $mysqli->query($sqli) or die ("Falha na execução da Query procure o suporte para resolução");
 
     $qtd = $sqli_query->num_rows;
 
