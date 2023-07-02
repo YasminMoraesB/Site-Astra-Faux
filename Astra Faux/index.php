@@ -7,19 +7,7 @@
     <link  href="style/inicio.css" rel="stylesheet">
     <title>Astra Faux</title>    
 </head>
-<script>
-            var timeoutID;
 
-            function resetTimer() {
-                clearTimeout(timeoutID);
-                timeoutID = setTimeout(function() {
-                window.location.href = "index.php";
-                }, 120000); // Redireciona para index.php após 2 minutos (120 segundos) de inatividade
-            }
-
-            document.addEventListener("mousemove", resetTimer);
-            document.addEventListener("keydown", resetTimer);
-        </script>
 <body>
     <header>
         <div id="title">
