@@ -3,50 +3,43 @@
 include ('conexao.php');
 
 
+
 if(isset($_POST['email']) || isset($_POST['senha'])){
 
+    //Evitando a injeção no Banco de Dados
     $email = $mysqli->real_escape_string($_POST['email']);
     $senha = $mysqli->real_escape_string($_POST['senha']);
 
-    $sqli = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
-    $sqli_query = $mysqli->query($sqli) or die ("Falha na execução da Query procure o suporte para resolução" . $mysqli->error);
+    $sqli = "SELECT * FROM usuario WHERE email = '$email' ";
+    $sqli_query = $mysqli->query($sqli) or die ("Falha na execução da Query procure o suporte para resolução");
+
 
     $qtd = $sqli_query->num_rows;
-
-    //Se email e senha estiverem realmente corretos e existirem vamos criar a sessao
+    
     if($qtd == 1){
-
         $usuario = $sqli_query->fetch_assoc();
-        if(!isset($_SESSION)){
-            session_start();
+
+        if(password_verify($senha, $usuario['senha'])){
+            if(!isset($_SESSION)){
+                session_start();
+                
+                $_SESSION['id'] = $usuario['id'];
+                $_SESSION['nome'] = $usuario['nome'];
+
+                echo ('<p style="color: #228B22";>Login feito com Sucesso!</p>');
+                echo "<p> Usuário Logado: </p>";
+                echo $_SESSION['nome'];
+                echo '<p><a href="logoff.php"> Logout</a></p>';
+            }
             
-
         }
-
-        $_SESSION['id'] = $usuario['id'];
-        $_SESSION['nome'] = $usuario['nome'];
-
-
-        echo ('<p style="color: #228B22";>Login feito com Sucesso!</p>');
-        //header('location: index.html');
-
-        if(isset($_SESSION['atividade']) && (time() - $_SESSION['atividade']) > 10000){
-            session_unset();
-            session_destroy();
-            echo "<script>window.location.href = 'index.php';</script>"; // Redirecionar para a página inicial
-            exit(); // Encerrar o script
-        }
-
-        $_SESSION['atividade'] = time();
-        echo "<p> Usuário Logado: ";
-        echo $_SESSION['nome'];
-        echo '<p><a href="logoff.php">Logout</a></p>';
-
     }else{
         echo ('<p style="color: #FF4500";>Falha no Login, tente novamente!</p>');
     }
-
+    
 }
+
+
 
 ?>
 
@@ -62,19 +55,17 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
     <title>Login</title>  
     
     <script>
-        var timeoutID;
+            var timeoutID;
 
-        function resetTimer() {
-        clearTimeout(timeoutID);
+            function resetTimer() {
+                clearTimeout(timeoutID);
+                timeoutID = setTimeout(function() {
+                window.location.href = "logoff_inatividade.php";
+                }, 120000); // Redireciona para logoff_inatividade para dar o motivo do logoff e depois pro index.html, após 2 minutos (120 segundos) de inatividade
+            }
 
-            timeoutID = setTimeout(function() {
-                window.location.href = "index.php";
-            }, 120000); // Redireciona para index.html 
-        }
-
-        //Usar as funções que captam o movimento do mouse e se teclas estao sendo pressionadas, pois também é uma atividade do usuario, assim o tempo de atividade reseta
-        document.addEventListener("mousemove", resetTimer);
-        document.addEventListener("keydown", resetTimer);
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("keydown", resetTimer);
     </script>
 
 </head>
