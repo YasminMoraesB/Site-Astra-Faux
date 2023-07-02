@@ -19,7 +19,12 @@
         include("conexao.php");
 
         $nome = $_POST["nome"];
+
+        //Senha e Criptografia da Senha
         $senha = $_POST["password"];
+        $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
+
+
         $data = $_POST["data"];
         $dataFormatada = date('Y-m-d', strtotime($data));
         $email = $_POST["email"];
@@ -35,7 +40,7 @@
         $sqli = "INSERT INTO usuario 
                     (nome, senha, data_de_nascimento, email, endereco, complemento, cidade, estado, cep)  
                 VALUES 
-                    ('$nome','$senha', '$dataFormatada', '$email', '$end', '$comple', '$cidade', '$estado', '$cep') ";
+                    ('$nome','$senhaCriptografada', '$dataFormatada', '$email', '$end', '$comple', '$cidade', '$estado', '$cep') ";
 
         
         //Se o cadastro for feito com sucesso 
