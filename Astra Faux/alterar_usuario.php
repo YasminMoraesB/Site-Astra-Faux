@@ -9,7 +9,7 @@
     <link href="style/Fonts.css" rel="stylesheet">
  
     
-    <title>Cadastro</title>
+    <title>Alterar usuario</title>
     
 </head>
 <body>
@@ -20,10 +20,10 @@
         <!--Páginas principais de navegação-->
 
         <ul>
-            <a href="index.php"><li>Inicio</li></a>
-            <a href="sobre.php"><li>Sobre</li></a>
-            <a href="produtos.php"><li>Produtos</li></a>
-            <a href="novidades.php"><li>Novidades</li></a>
+            <a href="painel_adm.php"><li>Painel</li></a>
+            <a href="painel_usuarios.php"><li>Usuario</li></a>
+            <a href="painel_produtos.php"><li>Produtos</li></a>
+            <a href="painel_novidades.php"><li>Novidades</li></a>
         </ul>
     </header>
 
@@ -43,7 +43,7 @@
   
                   while($dadoUsuario = mysqli_fetch_assoc($resultado)){
   
-                      //Nome da variavel | resultado dentro do nome da variavel de array | nome da coluna no banco de dados
+                      //Nome da variavel | Variavel pra pegar o nome das colunas | nome da coluna no banco de dados
                       $nome = $dadoUsuario["nome"];
                       $data = $dadoUsuario["data_de_nascimento"];
                       $email = $dadoUsuario["email"];
@@ -65,6 +65,14 @@
             <h4>Editar usuario</h4>
             <!--Inicio do formulário-->
             <form class="row g-3" action="salvarAlt_usuario.php" method="post">
+
+                <!--ID-->
+
+                <div class="col-md-6" style= "width: 400px;">
+                  <label for="inputText" class="form-label">ID</label>
+                  <input class="form-control" id = "id" name = "id" type="text" value="<?php echo $id?>" readonly>
+                  <small id="IdInfo" class="form-text text-muted">O ID não pode ser modificado pois pode acarretar em falhas no sistema</small>
+                </div>
 
                 <!--Nome-->
 
@@ -109,32 +117,32 @@
                 <div class="col-md-4" style= "width: 400px; margin-top: 30px;";>
                   <label for="inputState" class="form-label">Estado</label>
                   <select name="estado" id="estado" class="form-select">
-                    <option <?php echo ($estado == 'RO') ? 'checked' : ''?>>RO</option>
-                    <option>AC</option>
-                    <option>AM</option>
-                    <option>RR</option>
-                    <option>PA</option>
-                    <option>AP</option>
-                    <option>TO</option>
-                    <option>MA</option>
-                    <option>PI</option>
-                    <option>CE</option>
-                    <option>RN</option>
-                    <option>PB</option>
-                    <option>PE</option>
-                    <option>SE</option>
-                    <option>BA</option>
-                    <option>MG</option>
-                    <option>ES</option>
-                    <option <?php echo ($estado == 'RJ') ? 'checked' : ''?>>RJ</option>
-                    <option>SP</option>
-                    <option>PR</option>
-                    <option>SC</option>
-                    <option>RS</option>
-                    <option>MS</option>
-                    <option>MT</option>
-                    <option>GO</option>
-                    <option>DF</option>
+                    <option <?php echo ($estado == 'RO') ? 'selected' : ''?>>RO</option>
+                    <option <?php echo ($estado == 'AC') ? 'selected' : ''?>>AC</option>
+                    <option <?php echo ($estado == 'AM') ? 'selected' : ''?>>AM</option>
+                    <option <?php echo ($estado == 'RR') ? 'selected' : ''?>>RR</option>
+                    <option <?php echo ($estado == 'PA') ? 'selected' : ''?>>PA</option>
+                    <option <?php echo ($estado == 'AP') ? 'selected' : ''?>>AP</option>
+                    <option <?php echo ($estado == 'TO') ? 'selected' : ''?>>TO</option>
+                    <option <?php echo ($estado == 'MA') ? 'selected' : ''?>>MA</option>
+                    <option <?php echo ($estado == 'PI') ? 'selected' : ''?>>PI</option>
+                    <option <?php echo ($estado == 'CE') ? 'selected' : ''?>>CE</option>
+                    <option <?php echo ($estado == 'RN') ? 'selected' : ''?>>RN</option>
+                    <option <?php echo ($estado == 'PB') ? 'selected' : ''?>>PB</option>
+                    <option <?php echo ($estado == 'PE') ? 'selected' : ''?>>PE</option>
+                    <option <?php echo ($estado == 'SE') ? 'selected' : ''?>>SE</option>
+                    <option <?php echo ($estado == 'BA') ? 'selected' : ''?>>BA</option>
+                    <option <?php echo ($estado == 'MG') ? 'selected' : ''?>>MG</option>
+                    <option <?php echo ($estado == 'ES') ? 'selected' : ''?>>ES</option>
+                    <option <?php echo ($estado == 'RJ') ? 'selected' : ''?>>RJ</option>
+                    <option <?php echo ($estado == 'SP') ? 'selected' : ''?>>SP</option>
+                    <option <?php echo ($estado == 'PR') ? 'selected' : ''?>>PR</option>
+                    <option <?php echo ($estado == 'SC') ? 'selected' : ''?>>SC</option>
+                    <option <?php echo ($estado == 'RS') ? 'selected' : ''?>>RS</option>
+                    <option <?php echo ($estado == 'MS') ? 'selected' : ''?>>MS</option>
+                    <option <?php echo ($estado == 'MT') ? 'selected' : ''?>>MT</option>
+                    <option <?php echo ($estado == 'GO') ? 'selected' : ''?>>GO</option>
+                    <option <?php echo ($estado == 'DF') ? 'selected' : ''?>>DF</option>
                   </select>
                 </div>
 
