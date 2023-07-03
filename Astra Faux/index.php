@@ -37,7 +37,8 @@
                 <h6 id="slogan">Deixando seu olhar poderoso</h6>
                 <br>
                 <p class="subtitulo">Vamos começar?</p>
-                <button class="login" onclick="window.location.href = 'login_usuario.php'">Login</button>
+                <button class="produtos" onclick="window.location.href = 'produtos.php'">Conheça nossos produtos!</button>
+                <button class="novidades" onclick="window.location.href = 'novidades.php'">Visite nossas novidades!</button>
             </div>
         </section>
     </main>
