@@ -78,7 +78,7 @@ include ('conexao.php');
             $resultado = $mysqli->query($sqli) or die ("Erro ao consultar dados");
         } else {
 
-                   // Por questão de segurança e para evitar a injeção no banco de dados é feito esse comando real_escape_string
+            // Por questão de segurança e para evitar a injeção no banco de dados é feito esse comando real_escape_string
 
             $busca = $mysqli ->real_escape_string ($_GET['busca']);
             $sqlBusca = "SELECT * FROM usuario WHERE nome LIKE '%$busca%'";
@@ -117,18 +117,7 @@ include ('conexao.php');
         }
 
         echo "</table>";
-        
-
-
- 
-
-
-
-            //Obtendo os dados por meio de um loop
-           
-        //Caso não tenha dados cadastros entra aqui
-        
-
+    
     ?>
     
 </body>
