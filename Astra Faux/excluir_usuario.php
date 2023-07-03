@@ -21,8 +21,6 @@ if(!isset($_SESSION)){
 
     <head>
         <meta charset="utf-8">
-        <!-- Latest compiled and minified CSS -->
-        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
