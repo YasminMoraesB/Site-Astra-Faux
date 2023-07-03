@@ -93,7 +93,7 @@ if (!isset($_SESSION['username'])) {
 
                 <!--ID-->
 
-                <div class="col-md-6" style="width: 200px;">
+                <div class="col-md-6" >
                     <label for="inputText" class="form-label">ID</label>
                     <input class="form-control" id="id" name="id" type="text" value="<?php echo $id ?>" readonly>
                     <small id="IdInfo" class="form-text text-muted">O ID não pode ser modificado pois pode acarretar em falhas no sistema</small>
@@ -112,14 +112,15 @@ if (!isset($_SESSION['username'])) {
                     <input type="number" class="form-control" id="qtd" name="qtd" value="<?php echo $qtd ?>" min="0" step="1">
                 </div>
 
-                <!--Quantidade-->
-                <div class="form-group" style="width: 200px;">
+                <!--Valor-->
+                <div class="form-group" style= "width: 450px;">
                     <label for="valor">Valor</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">R$</span>
                         </div>
-                        <input type="number" class="form-control" id="valor" name="valor" min="0" step="1" value="<?php echo $valor ?>" placeholder="0.00" pattern="\d+(\.\d{2})?" required>
+                        <input type="text" class="form-control" id="valor" name="valor" placeholder="0.00" pattern="\d+(\.\d{2})?" required>
+                        <small>Ao invés de (,) insira (.) para dividir a casa decimal. Exemplo: 2.00</small>
                     </div>
                 </div>
 
