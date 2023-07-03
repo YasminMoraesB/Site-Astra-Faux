@@ -72,13 +72,14 @@ include ('conexao.php');
                 </div>
 
                 <!--Valor-->
-                <div class="form-group" style= "width: 200px;">
+                <div class="form-group" style= "width: 450px;">
                     <label for="valor">Valor</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">R$</span>
                         </div>
-                        <input type="number" class="form-control" min="0" step="1" id="valor" name="valor" placeholder="0.00" pattern="\d+(\.\d{2})?" required>
+                        <input type="text" class="form-control" id="valor" name="valor" placeholder="0.00" pattern="\d+(\.\d{2})?" required>
+                        <small>Ao invés de (,) insira (.) para dividir a casa decimal. Exemplo: 2.00</small>
                     </div>
                 </div>
 
