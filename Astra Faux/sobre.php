@@ -1,3 +1,21 @@
+<?php 
+    if(!isset($_SESSION)){
+        session_start();
+        
+        if($_SESSION != NULL){
+            $nomeUsuario = $_SESSION['nome'];
+
+            echo "<p style = 'color:black'> Usuário Logado: ";
+            echo $nomeUsuario;
+            echo '<p><a href="logoff.php"> Logout</a></p>';	
+        }else{
+            $nomeUsuario = NULL;
+        }
+    }
+                
+         
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -77,19 +95,3 @@
       </div>
 </body>
 </html>
-
-<?php 
-    if(!isset($_SESSION)){
-        session_start();		
-    }
-                
-    if (!isset($_SESSION['nome'])){
-        die ();
-        
-    } else {
-        echo "<p style = 'color:white'> Usuário Logado: ";
-                    echo $_SESSION['nome'];
-                    echo '<p><a href="logoff.php"> Logout</a></p>';
-    }
-
-?>
