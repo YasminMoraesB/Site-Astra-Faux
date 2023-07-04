@@ -51,11 +51,11 @@ include ('conexao.php');
         <h1 class='ml-3'> Consultar Produto</h1>
         <p class='ml-3'> I- Para uma busca por nome <b style = "color:rgb(132, 14, 201)">digite o nome do produto</b> na barra de busca e <b style = "color:rgb(132, 14, 201)">clique em pesquisar</b></p>
         <p class='ml-3'> II- Para mostrar todos os registros <b style = "color:rgb(132, 14, 201)">deixe a barra de busca vazia e clique em pesquisar</b></p>
-        <p class='ml-3'> <b style = "color:rgb(132, 14, 201)">OBS.: </b> Para visualizar a imagem do Produto, basta <b style = "color:rgb(132, 14, 201)">clicar no link com o nome da imagem</b> na coluna Imagem</p>
+        <p class='ml-3'> <b style = "color:rgb(132, 14, 201)">OBS.: </b> Para visualizar a imagem do Produto, basta <b style = "color:rgb(132, 14, 201)">clicar no link </b> na coluna Imagem</p>
     </header>
 
     <form action="">    
-        <input style="width:300px; margin-left: 15px; " name="busca" placeholder="Digite um nome para pesquisar" type="text">
+        <input style="width:300px; margin-left: 15px; " name="busca" placeholder="Digite o nome do produto para pesquisar" type="text">
         <button type="submit" class="btn btn-primary">Pesquisar</button>
         <a class="btn btn-outline-dark" href="painel_produtos.php" role="button">Voltar ao painel</a>
     </form>
