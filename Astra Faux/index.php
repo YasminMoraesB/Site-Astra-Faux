@@ -55,7 +55,9 @@
     <p class="redes">Loja virtual</p>
 
     <div class="login-container">
-      <a class="login_adm" href="login_adm.php">Login adm</a>
+        <a class="login_adm" href="login_usuario.php">Login</a>
+        <a class="login_adm" href="login_adm.php">Login adm</a>
+
     </div>
   </footer>
 
