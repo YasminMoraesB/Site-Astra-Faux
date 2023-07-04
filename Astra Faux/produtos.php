@@ -29,19 +29,6 @@
         <div id="title">
             <h1>Astra Faux</h1>
         </div>
-        <script>
-            var timeoutID;
-
-            function resetTimer() {
-                clearTimeout(timeoutID);
-                timeoutID = setTimeout(function() {
-                window.location.href = "logoff_inatividade.php";
-                }, 120000); // Redireciona para logoff_inatividade para dar o motivo do logoff e depois pro index.html, após 2 minutos (120 segundos) de inatividade
-            }
-
-            document.addEventListener("mousemove", resetTimer);
-            document.addEventListener("keydown", resetTimer);
-        </script>
         <!--Páginas principais de navegação-->
 
         <ul>

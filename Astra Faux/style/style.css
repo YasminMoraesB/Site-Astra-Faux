@@ -1,230 +1,217 @@
-body {
+body{
     background-color: #f6f7f9;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
-  }
-  
-  header {
+}
+
+
+header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  title {
+}
+title{
     flex-direction: column;
     line-height: 10px;
-  }
-  
-  .navFont {
+}
+
+.navFont{
     color: #343434;
     font-family: Merienda Bold;
-  }
-  
-  li {
-    display: inline-block;
-    margin: 20px;
-  }
-  
-  a {
-    color: #343434;
-  }
-  
-  a:hover {
+}
+
+li{
+     display: inline-block;
+     margin:20px;
+}
+a{
+    color:#343434;
+}
+a:hover{
     color: rgb(132, 14, 201);
-    transition: 0.3s all;
-  }
-  
-  h1 {
+    transition: 0,3s all;
+}
+h1{
     font-weight: 190px;
-  }
-  
-  main {
+}
+main{
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     margin-top: 25px;
-  }
-  
-  p {
-    margin-bottom: 0;
+}
+p{
+    margin-bottom: 0cqmin;
     line-height: 20px;
     max-width: 450px;
     font-family: Arial;
     font-weight: bold;
-    color: #343434;
-  }
-  
-  img {
+    color:#343434;
+}
+img{
     width: 40%;
     float: right;
     margin-top: 2%;
-  }
-  
-  form {
+}
+form{
     display: flex;
     flex-direction: column;
     width: 50%;
-  }
-  
-  .newConta {
+}
+
+
+.newConta{
     color: #f8b122;
     font-family: arial;
     font-size: 80%;
-    padding: 1%;
-  }
-  
-  .newConta:hover {
+    padding: 1%; 
+}
+
+.newConta:hover{
     color: #ececec;
     transform: scale(1.05);
-  }
-  
-  .login {
-    color: rgb(245, 245, 245);
-  }
-  
-  input {
+    
+}
+
+.login{
+    color:rgb(245, 245, 245);
+}
+
+input{
     margin-top: 20px;
     height: 20%;
-    width: 100%;
+    width: 130%;
     padding: 15px;
     border-radius: 20px;
     border: none;
     font-size: 15px;
-  }
-  
-  .entrar {
+    
+}
+
+.entrar{
     height: 50px;
     width: 80%;
-    background-color: #e6ac38;
+    background-color:#e6ac38;
     border-radius: 20px;
     color: rgb(34, 34, 34);
     font-weight: bold;
     font-family: arial;
     font-size: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 40%;
     border: none;
     cursor: pointer;
     margin-top: 15px;
-  }
-  
-  .entrar:hover {
+}
+
+.entrar:hover{
     transform: scale(1.05);
-  }
-  
-  .caixaLogin {
-    background-color: rgb(132, 14, 201);
+}
+
+.caixaLogin{
+    background-color:rgb(132, 14, 201);
     width: 30%;
     height: 63%;
     border-radius: 20px;
-  }
-  
-  .conteudoLogin {
+    position: fixed;
+
+}
+
+.conteudoLogin{
     margin-top: 9%;
     margin-left: 20%;
-  }
-  
-  .formTitulo {
+}
+
+.formTitulo{
     color: #f8b122;
     font-family: Merienda Bold;
     font-size: 200%;
-  }
-  
-  .formulario {
+}
+
+.formulario{
     color: #f8b122;
     display: flex;
     margin-right: 60%;
-  }
-  
-  .admlogin {
+}
+.admlogin{
     color: #343434;
     font-family: merienda Bold;
-    font-size: 140%;
-  }
-  
-  /* Responsivo */
-  @media screen and (max-width: 760px) {
-    header {
-      flex-direction: column;
+    font-size:140%;
+}
+
+
+/*aqui fica responsivo*/
+
+@media screen and (max-width: 760px){
+    header{
+        flex-direction: column;
     }
-  
-    main {
-      flex-direction: column;
+
+    main{
+        flex-direction: column;
     }
-  
-    h2 {
-      font-size: 38px;
-      text-align: center;
+
+    h2{
+        font-size: 38px;
+        text-align: center;
     }
-  
-    form {
-      margin: 0 auto;
-      width: 100%;
+
+    form{
+        margin: 0 auto;
+        width: 100%;
     }
-  
-    input {
-      margin-top: 20px;
-      height: 20%;
-      width: 70%;
-      padding: 15px;
-      border-radius: 20px;
-      border: none;
-      font-size: 15px;
+
+    input{
+        margin-top: 20px;
+        height: 20%;
+        width: 70%;
+        padding: 15px;
+        border-radius: 20px;
+        border: none;
+        font-size: 15px;
     }
-  
-    img {
-      margin-top: 6%;
-      width: 40%;
+
+    img{
+        margin-top: 6%;
+        width: 40%;
     }
-  
-    ul {
-      text-align: center;
+
+    ul{
+        text-align: center;
     }
-  
-    span {
-      text-align: center;
+
+    span{
+        text-align: center;
     }
-  
-    .caixaLogin {
-      background-color: rgb(132, 14, 201);
-      width: 50%;
-      height: 80%;
-      border-radius: 20px;
-      position: fixed;
+
+    .caixaLogin{
+        background-color:rgb(132, 14, 201);
+        width: 50%;
+        height: 60%;
+        border-radius: 20px;
+        position: fixed;
+    
     }
-  
-    .conteudoLogin {
-      margin-top: 5%;
-      margin-left: 15%;
-      height: 20%;
+    
+    .conteudoLogin{
+        margin-top: 5%;
+        margin-left: 15%;
+        height: 20%;
     }
-  
-    .formTitulo {
-      color: #f8b122;
-      font-family: Merienda Bold;
-      font-size: 170%;
-      margin-right: 15%;
+
+    .formTitulo{
+        color: #f8b122;
+        font-family: Merienda Bold;
+        font-size: 170%;
+        margin-right: 15%;
     }
-  
-    .formulario {
-      color: #f8b122;
-      display: flex;
-      margin-right: 60%;
+
+    .formulario{
+        color: #f8b122;
+        display: flex;
+        margin-right: 60%;
     }
-  
-    .entrar {
-      height: 50px;
-      width: 80%;
-      background-color: #e6ac38;
-      border-radius: 20px;
-      color: rgb(34, 34, 34);
-      font-weight: bold;
-      font-family: arial;
-      font-size: 90%;
-      border: none;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-  }
-  
+
+
+}
+

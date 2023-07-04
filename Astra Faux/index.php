@@ -36,8 +36,8 @@
         <h2>Astra Faux</h2>
         <h6 id="slogan">Deixando seu olhar poderoso</h6>
         <p class="subtitulo">Vamos começar?</p>
-        <button class="conhecaBotao" onclick="window.location.href = 'produtos.php'">Conheça nossos produtos!</button>
-        <button class="conhecaBotao" onclick="window.location.href = 'novidades.php'">Conheça nossas novidades!</button>
+        <button class="conhecaBotao1" onclick="window.location.href = 'produtos.php'">Conheça nossos produtos!</button>
+        <button class="conhecaBotao2" onclick="window.location.href = 'novidades.php'">Conheça nossas novidades!</button>
       </div>
     </section>
 

@@ -1,27 +1,35 @@
+<?php 
+    if(!isset($_SESSION)){
+        session_start();
+        
+        if($_SESSION != NULL){
+            $nomeUsuario = $_SESSION['nome'];
+
+            echo "<p style = 'color:black'> Usuário Logado: ";
+            echo $nomeUsuario;
+            echo '<p><a href="logoff.php"> Logout</a></p>';	
+        }else{
+            $nomeUsuario = NULL;
+        }
+    }
+                
+         
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="style/novidades.css" rel="stylesheet">
+    <link href="style/Fonts.css" rel="stylesheet">
     <title>Novidades</title>
 </head>
     <header>
         <div id="title">
             <h1>Astra Faux</h1>
         </div>
-        <script>
-            var timeoutID;
-
-            function resetTimer() {
-                clearTimeout(timeoutID);
-                timeoutID = setTimeout(function() {
-                window.location.href = "logoff_inatividade.php";
-                }, 120000); // Redireciona para logoff_inatividade para dar o motivo do logoff e depois pro index.html, após 2 minutos (120 segundos) de inatividade
-            }
-
-            document.addEventListener("mousemove", resetTimer);
-            document.addEventListener("keydown", resetTimer);
-        </script>
         <!--Páginas principais de navegação-->
 
         <ul>
@@ -32,21 +40,26 @@
         </ul>
     </header>
 <body>
-    EM CONSTRUÇÃO...
+<?php
+        include('conexao.php');
+
+        $query = "SELECT * FROM novidade ORDER BY NOW()";
+        $result = mysqli_query($mysqli, $query);
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            $titulo = $row['titulo'];
+            $texto = $row['texto'];
+            $autor = $row['autor'];
+            $dataFormatada = $row['data_da_publicacao'];
+            
+
+            echo "<div class='container'>";
+            echo "<h3>$titulo</h3>";
+            echo "<p>$texto</p>";
+            echo "<p>$autor</p>";
+            echo "<p>Data: $dataFormatada</p>";
+            echo "</div>";
+        }
+    ?>
 </body>
 </html>
-
-
-<?php 
-    if(!isset($_SESSION)){
-        session_start();		
-    }
-                
-    if (!isset($_SESSION['nome'])){
-        die ();
-    } else {
-        echo "<p style = 'color:black'> Usuário Logado: ";
-                    echo $_SESSION['nome'];
-                    echo '<p><a href="logoff.php"> Logout</a></p>';
-    }     
-?>

@@ -65,7 +65,7 @@ include ('conexao.php');
 
     <?php 
   
-        if(!empty($_GET['id'])){
+    if(!empty($_GET['id'])){
         include('conexao.php');
 
         $id = $_GET['id'];
@@ -88,6 +88,7 @@ include ('conexao.php');
             header('Location: consultar_novidade.php');
         }
   }
+
 ?>
 
 
@@ -97,34 +98,41 @@ include ('conexao.php');
             <!--Inicio do formulário-->
             
             
-            <form class="row g-3" action="salvarCadastro_novidade.php" method="post">
+            <form class="row g-3" action="salvaralt_novidade.php" method="post">
+
+                <div class="col-md-6" style= "width: 400px;">
+                  <label for="inputText" class="form-label">ID</label>
+                  <input class="form-control" id = "id" name = "id" type="text" value="<?php echo $id?>" readonly>
+                  <small id="IdInfo" class="form-text text-muted">O ID não pode ser modificado pois pode acarretar em falhas no sistema</small>
+                </div>
 
                 <!-- Titulo da novidade-->
-            <div class="col-md-6" style= "width: 400px;">
-                  <label for="inputText" class="form-label">Título</label>
-                  <input type="text" class="form-control" name="titulo" id="titulo" value="<?php echo $titulo?>" >
+                <div class="col-md-6" style= "width: 400px;">
+                    <label for="inputText" class="form-label">Título</label>
+                    <input type="text" class="form-control" name="titulo" id="titulo" value="<?php echo $titulo?>" >
                 </div>
 
                 <!--Autor da novidade-->
-            <div class="col-md-6" style= "width: 400px;">
-                  <label for="inputText" class="form-label">Autor</label>
-                  <input type="text" class="form-control" name="autor" id="autor"value = "<?php echo $autor?>">
+                <div class="col-md-6" style= "width: 400px;">
+                    <label for="inputText" class="form-label">Autor</label>
+                    <input type="text" class="form-control" name="autor" id="autor"value = "<?php echo $autor?>">
                 </div>
-            <br>
+                <br>
 
 
-            <!--Area de texto-->
-            <div class="form-row" style= "width: 400px">
+                <!--Area de texto-->
+                <div class="form-row" style= "width: 400px">
                     <label for="textarea">Texto</label>
-                    <textarea class="form-control" id="textArea" name="textArea" rows="3" ><?php echo $texto?></textarea>
-                </div>          
-            <div class="col-12">
-                  <br>
-                  <button type="submit" class="btn btn-warning"> Enviar </button>
-                  <a href="painel_novidades.php" class="btn btn-outline-secondary" role="button" >Voltar</a>
+                    <textarea class="form-control" id="texto" name="texto" rows="3" ><?php echo $texto?></textarea>
+                </div>  
+
+                <div class="col-12">
+                    <br>
+                    <button type="submit" class="btn btn-warning" id="update" name="update"> Enviar </button>
+                    <a href="painel_novidades.php" class="btn btn-outline-secondary" role="button" >Voltar</a>
                 </div>
-              </form>
-              </form>
+
+            </form>
         
         <!--Fim do formulário-->
     </section>

@@ -211,7 +211,7 @@ if (!isset($_SESSION['username'])) {
                             WHERE id = $id") or die($mysqli->error);
 
                     echo "<script>alert('Dados do produto atualizados com sucesso!');</script>";
-                    echo "<script>window.location='painel_produtos.php';</script>";
+                    echo "<script>window.location='consultar_produto.php';</script>";
                 } else {
                     echo "<p>Erro ao enviar imagem, tente novamente</p>";
                 }
@@ -224,7 +224,7 @@ if (!isset($_SESSION['username'])) {
                         WHERE id = $id") or die($mysqli->error);
 
                 echo "<script>alert('Dados do produto atualizados com sucesso!');</script>";
-                echo "<script>window.location='painel_produtos.php';</script>";
+                echo "<script>window.location='consultar_produto.php';</script>";
             }
         }
     ?>
