@@ -26,10 +26,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
                 $_SESSION['id'] = $usuario['id'];
                 $_SESSION['nome'] = $usuario['nome'];
 
-                echo ('<p style="color: #228B22";>Login feito com Sucesso!</p>');
-                echo "<p> Usuário Logado: </p>";
-                echo $_SESSION['nome'];
-                echo '<p><a href="logoff.php"> Logout</a></p>';
+                echo "<script>alert('Login feito com sucesso!');</script>";
+                echo "<script>window.location='produtos.php';</script>";
             }
             
         }
@@ -109,7 +107,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
                 <!--Inserir link para  a página de criar cadastro-->
                 <p><a class="newConta" href="cadastro_usuario.html"> Crie sua conta </a></p>
 
-                <button class="entrar" onclick="window.location.href = 'index.php'">Entrar</button>
+                <button class="entrar" type="submit" = "index.php">Entrar</button>
             </form>
         </div>
     </section>
