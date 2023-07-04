@@ -52,6 +52,20 @@ if(isset($_POST['username']) || isset($_POST['senha'])){
     
     <title>Login</title>  
 
+    <script>
+            var timeoutID;
+
+            function resetTimer() {
+                clearTimeout(timeoutID);
+                timeoutID = setTimeout(function() {
+                window.location.href = "logoff_inatividade.php";
+                }, 120000); // Redireciona para logoff_inatividade para dar o motivo do logoff e depois pro index.html, após 2 minutos (120 segundos) de inatividade
+            }
+
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("keydown", resetTimer);
+        </script>
+
 </head>
 <body>
     <header>
@@ -61,8 +75,8 @@ if(isset($_POST['username']) || isset($_POST['senha'])){
         <ul class="navFont">
             <a href="index.php"><li>Inicio</li></a>
             <a href="sobre.php"><li>Sobre</li></a>
-            <a href="#"><li>Produtos</li></a>
-            <a href="#"><li>Novidades</li></a>
+            <a href="produtos.php"><li>Produtos</li></a>
+            <a href="novidades.php"><li>Novidades</li></a>
         </ul>
     </header>
     

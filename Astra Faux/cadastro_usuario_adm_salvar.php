@@ -1,3 +1,21 @@
+<?php
+
+include ('conexao.php');
+
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
+    if (!isset($_SESSION['username'])) {
+        die();
+    } else {
+        echo "<p style='color:rgb(132, 14, 201)'> Usuário Logado: ";
+        echo $_SESSION['username'];
+        echo '<p><a href="logoff.php"> Logout</a></p>';
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,6 +28,21 @@
 
     <link rel = "stylesheet" href = "style.css">
     <title>Cadastro de Clientes</title> 
+
+    <script>
+         var timeoutID;
+
+        function resetTimer() {
+            clearTimeout(timeoutID);
+            timeoutID = setTimeout(function() {
+            window.location.href = "logoff_inatividade.php";
+            }, 120000); // Redireciona para logoff_inatividade para dar o motivo do logoff e depois pro index.html, após 2 minutos (120 segundos) de inatividade
+        }
+
+        document.addEventListener("mousemove", resetTimer);
+        document.addEventListener("keydown", resetTimer);
+    </script>
+    
 </head>
 <body>
 

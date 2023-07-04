@@ -31,7 +31,21 @@ include ('conexao.php');
     <link href="style/Fonts.css" rel="stylesheet">
  
     
-    <title>Cadastro</title>
+    <title>Cadastro de Usuario</title>
+
+    <script>
+         var timeoutID;
+
+        function resetTimer() {
+            clearTimeout(timeoutID);
+            timeoutID = setTimeout(function() {
+            window.location.href = "logoff_inatividade.php";
+            }, 120000); // Redireciona para logoff_inatividade para dar o motivo do logoff e depois pro index.html, após 2 minutos (120 segundos) de inatividade
+        }
+
+        document.addEventListener("mousemove", resetTimer);
+        document.addEventListener("keydown", resetTimer);
+    </script>
     
 </head>
 <body>

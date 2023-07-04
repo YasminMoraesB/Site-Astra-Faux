@@ -30,6 +30,20 @@ include ('conexao.php');
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Consultar Produto</title>
 
+    <script>
+         var timeoutID;
+
+        function resetTimer() {
+            clearTimeout(timeoutID);
+            timeoutID = setTimeout(function() {
+            window.location.href = "logoff_inatividade.php";
+            }, 120000); // Redireciona para logoff_inatividade para dar o motivo do logoff e depois pro index.html, após 2 minutos (120 segundos) de inatividade
+        }
+
+        document.addEventListener("mousemove", resetTimer);
+        document.addEventListener("keydown", resetTimer);
+    </script>
+
 </head>
 <body>
     <header>
