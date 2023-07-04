@@ -58,32 +58,32 @@ include ('conexao.php');
             
             <form class="row g-3" action="salvarCadastro_novidade.php" method="post">
 
-                <!-- Titulo da novidade-->
-            <div class="col-md-6" style= "width: 400px;">
-                  <label for="inputText" class="form-label">Título</label>
-                  <input type="text" class="form-control" name="titulo" id="titulo">
-                </div>
+                    <!-- Titulo da novidade-->
+                <div class="col-md-6" style= "width: 400px;">
+                    <label for="inputText" class="form-label">Título</label>
+                    <input type="text" class="form-control" name="titulo" id="titulo">
+                    </div>
 
-                <!--Autor da novidade-->
-            <div class="col-md-6" style= "width: 400px;">
-                  <label for="inputText" class="form-label">Autor</label>
-                  <input type="text" class="form-control" name="autor" id="autor">
-                </div>
-            <br>
+                    <!--Autor da novidade-->
+                <div class="col-md-6" style= "width: 400px;">
+                    <label for="inputText" class="form-label">Autor</label>
+                    <input type="text" class="form-control" name="autor" id="autor">
+                    </div>
+                <br>
 
+                <!--Area de texto-->
+                <div class="mb-3">
+                    <label for="textArea" class="form-label" style="width:300px">Texto</label>
+                    <textarea class="form-control" name= "textArea" id="textArea" rows="3"></textarea>
+                </div>  
 
-            <!--Area de texto-->
-            <div class="mb-3">
-                <label for="textArea" class="form-label" style="width:300px">Texto</label>
-                <textarea class="form-control" name= "textArea" id="textArea" rows="3"></textarea>
-            </div>           
-            <div class="col-12">
-                  <br>
-                  <button type="submit" class="btn btn-warning"> Enviar </button>
-                  <a href="painel_usuarios.php" class="btn btn-outline-secondary" role="button" >Voltar</a>
+                <div class="col-12">
+                    <br>
+                    <button type="submit" class="btn btn-warning"> Enviar </button>
+                    <a href="painel_novidades.php" class="btn btn-outline-secondary" role="button" >Voltar</a>
                 </div>
-              </form>
-              </form>
+            </form>
+            
         
         <!--Fim do formulário-->
     </section>
